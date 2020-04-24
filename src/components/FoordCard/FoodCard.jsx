@@ -4,22 +4,17 @@ const FoodCard = ({ image }) => {
   return (
     <div className="ui card">
       <div className="image">
-        <img src={image} alt={image.description} />
+        <img src={image.src} alt={image.description} />
       </div>
       <div className="content">
-        <a className="header">Kristy</a>
+        <a className="header">{image.description}</a>
         <div className="meta">
-          <span className="date">Joined in 2013</span>
+          <span className="date">{image.description}</span>
         </div>
-        <div className="description">
-          Kristy is an art director living in New York.
-        </div>
+        <div className="description">{image.description}</div>
       </div>
       <div className="extra content">
-        <a>
-          <i className="user icon"></i>
-          22 Friends
-        </a>
+        <a>+ $0.50</a>
       </div>
     </div>
   );

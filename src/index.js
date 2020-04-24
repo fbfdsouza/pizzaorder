@@ -6,7 +6,7 @@ import images from "./images";
 const App = () => {
   return (
     <div>
-      <FoodCard image={images[0].src} />
+      <FoodCard image={images[0]} />
     </div>
   );
 };
