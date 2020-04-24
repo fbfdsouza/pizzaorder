@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import FoodCard from "./components/FoordCard/";
+import FoodCard from "./components/FoordCard";
 import images from "./images";
+import "./styles/styles.css";
 
 const App = () => {
   return (
