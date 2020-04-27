@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/react-transition-group": "^4.2.4",
     "history": "^4.10.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

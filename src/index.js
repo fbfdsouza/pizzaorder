@@ -1,13 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import FoodCard from "./components/FoordCard";
-import images from "./images";
 import "./styles/styles.css";
+import BackGroundImage from "./components/BackGround";
+import AppContainer from "./containers/AppContainer";
 
 const App = () => {
   return (
-    <div>
-      <FoodCard image={images[0]} />
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+      }}
+    >
+      <BackGroundImage src="https://www.freshbrothers.com/wp-content/uploads/2019/12/PIZZA_Hero-1-scaled.jpg" />
+      <AppContainer />
     </div>
   );
 };

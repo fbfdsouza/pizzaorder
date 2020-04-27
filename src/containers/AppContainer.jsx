@@ -13,7 +13,7 @@ class App extends Component {
       <Fragment>
         <Router history={getHistory()}>
           <Switch>
-            <Route exact path="/" component={HomePage} />
+            <Route exact path="/" component={ChoosePizzaSizePage} />
             <Route
               exact
               path="/choose-pizza-size"
