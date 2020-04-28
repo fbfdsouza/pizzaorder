@@ -4,7 +4,6 @@ import { getHistory } from "../utils";
 import ChoosePizzaSizePage from "./pages/ChoosePizzaSizePage";
 import ChoosePizzaCrustPage from "./pages/ChoosePizzaCrustPage";
 import ChoosePizzaToppingsPage from "./pages/ChoosePizzaToppingsPage";
-import ReviewCustomPizzaPage from "./pages/ReviewCustomPizzaPage";
 
 class App extends Component {
   render() {
@@ -22,11 +21,6 @@ class App extends Component {
               exact
               path="/choose-pizza-toppings"
               component={ChoosePizzaToppingsPage}
-            />
-            <Route
-              exact
-              path="/review-pizza-order"
-              component={ReviewCustomPizzaPage}
             />
           </Switch>
         </Router>

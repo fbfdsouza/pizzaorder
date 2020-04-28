@@ -1,0 +1,3 @@
+export const PIZZA_SIZE = "PIZZA_SIZE";
+export const CRUST_THICKNESS = "CRUST_THICKNESS";
+export const PIZZA_TOPPINGS = "PIZZA_TOPPINGS";

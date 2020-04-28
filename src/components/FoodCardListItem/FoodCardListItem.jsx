@@ -1,7 +1,13 @@
 import React from "react";
 import AddItem from "../AddItem";
 
-const FoodCardListItem = ({ image, itemName }) => {
+const FoodCardListItem = ({
+  image,
+  itemName,
+  description,
+  updateToppings,
+  enabled,
+}) => {
   return (
     <div
       style={{
@@ -10,9 +16,13 @@ const FoodCardListItem = ({ image, itemName }) => {
         justifyContent: "space-between",
       }}
     >
-      <img class="ui avatar image" src={image} alt={itemName} />
-      <div class="content">{itemName}</div>
-      <AddItem itemName={itemName} />
+      <img className="ui avatar image" src={image} alt={itemName} />
+      <div className="content">{description}</div>
+      <AddItem
+        itemName={itemName}
+        updateToppings={updateToppings}
+        enabled={enabled}
+      />
     </div>
   );
 };
