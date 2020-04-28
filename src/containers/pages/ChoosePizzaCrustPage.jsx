@@ -1,28 +1,43 @@
-import React from "react";
+import React, { Fragment } from "react";
+import PresentationFoodCardList from "../../components/PresentationFoodCardList";
+import PresentationFoodCard from "../../components/PresentationFoordCard";
 
 class ChoosePizzaCrustPage extends React.Component {
   render() {
     return (
-      <div className="ui massive horizontal divided list">
-        <div className="item">
-          <img
-            style={{ fontSize: "100%" }}
-            className="image"
-            src="https://res.cloudinary.com/fbfdsouza/image/upload/v1588028093/pizzaorder/a912519339f9c022cc5ba8e6d383921d_sxwryt.svg"
-          />
-          <div className="content">
-            <div className="header">Thin</div>
-          </div>
+      <div>
+        <div
+          style={{
+            position: "absolute",
+            display: "flex",
+            justifyContent: "center",
+            width: "100%",
+            height: "109px",
+            alignItems: "center",
+          }}
+        >
+          <h2>Choose your pizza crust</h2>
         </div>
-        <div className="item">
-          <img
-            style={{ fontSize: "100%" }}
-            className="image"
-            src="https://res.cloudinary.com/fbfdsouza/image/upload/v1588028093/pizzaorder/bd9180dc164d6192cb6ab9b206fc8f6f_p2jh9g.svg"
-          />
-          <div className="content">
-            <div className="header">Thick</div>
-          </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100vh",
+          }}
+        >
+          <PresentationFoodCardList>
+            <Fragment>
+              <PresentationFoodCard
+                image="https://res.cloudinary.com/fbfdsouza/image/upload/c_limit,h_100,w_100/v1588062925/pizzaorder/thick_a1f0gr.png"
+                name="Thin"
+              />
+              <PresentationFoodCard
+                image="https://res.cloudinary.com/fbfdsouza/image/upload/c_limit,h_100,w_100/v1588062925/pizzaorder/bd9180dc164d6192cb6ab9b206fc8f6f_egjsax.png"
+                name="Thick"
+              />
+            </Fragment>
+          </PresentationFoodCardList>
         </div>
       </div>
     );

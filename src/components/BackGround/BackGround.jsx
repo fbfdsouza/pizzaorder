@@ -4,15 +4,15 @@ const BackGroundImage = ({ src }) => {
   return (
     <div
       style={{
-        position: "absolute",
+        position: "fixed",
         height: "50vh",
         overflow: "hidden",
         top: "25vh",
         opacity: "0.15",
-        width: "95%",
+        width: "100%",
       }}
     >
-      <img src={src} />
+      <img src={src} alt="background" />
     </div>
   );
 };
