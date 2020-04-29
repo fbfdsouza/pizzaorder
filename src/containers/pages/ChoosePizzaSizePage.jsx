@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import PresentationFoodCardList from "../../components/PresentationFoodCardList";
 import PresentationFoodCard from "../../components/PresentationFoordCard";
 import { Link } from "react-router-dom";
@@ -34,30 +34,34 @@ class ChoosePizzaSizePage extends React.Component {
           }}
         >
           <PresentationFoodCardList>
-            <Fragment>
-              <Link to="/choose-pizza-crust">
-                <PresentationFoodCard
-                  image="https://res.cloudinary.com/fbfdsouza/image/upload/c_limit,h_50,w_50/v1588062925/pizzaorder/pizzabox_ihlwjp.png"
-                  name="Small"
-                  price={""}
-                  onClick={() => setPizzaSize("small")}
-                />
-              </Link>
+            <PresentationFoodCard
+              image="https://res.cloudinary.com/fbfdsouza/image/upload/c_limit,h_50,w_50/v1588062925/pizzaorder/pizzabox_ihlwjp.png"
+              name="Small"
+              price={""}
+              onClick={() => setPizzaSize("small")}
+            />
 
-              <PresentationFoodCard
-                image="https://res.cloudinary.com/fbfdsouza/image/upload/c_limit,h_60,w_60/v1588062925/pizzaorder/pizzabox_ihlwjp.png"
-                name="Medium"
-                price={""}
-                onClick={() => setPizzaSize("meddium")}
-              />
+            <PresentationFoodCard
+              image="https://res.cloudinary.com/fbfdsouza/image/upload/c_limit,h_60,w_60/v1588062925/pizzaorder/pizzabox_ihlwjp.png"
+              name="Medium"
+              price={""}
+              onClick={() => setPizzaSize("meddium")}
+            />
 
-              <PresentationFoodCard
-                image="https://res.cloudinary.com/fbfdsouza/image/upload/c_scale,h_70,w_70/v1588062925/pizzaorder/pizzabox_ihlwjp.png"
-                name="Big"
-                price={""}
-              />
-            </Fragment>
+            <PresentationFoodCard
+              image="https://res.cloudinary.com/fbfdsouza/image/upload/c_scale,h_70,w_70/v1588062925/pizzaorder/pizzabox_ihlwjp.png"
+              name="Big"
+              price={""}
+            />
           </PresentationFoodCardList>
+          <div>
+            <Link to="/choose-pizza-crust">
+              <i
+                class="right chevron icon"
+                style={{ marginRight: "30px", color: "green" }}
+              ></i>
+            </Link>
+          </div>
         </div>
       </div>
     );

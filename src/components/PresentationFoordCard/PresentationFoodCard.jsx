@@ -1,17 +1,19 @@
 import React from "react";
 
-const PresentationFoodCard = ({ image, name }) => {
+const PresentationFoodCard = ({ image, name, description, onClick }) => {
   return (
     <div
+      onClick={() => onClick(name)}
       style={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        cursor: "pointer",
       }}
     >
-      <img src={image} alt={name} />
+      <img src={image} alt={description} />
 
-      <div>{name}</div>
+      <div>{description}</div>
     </div>
   );
 };

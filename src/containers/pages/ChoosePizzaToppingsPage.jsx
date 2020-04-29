@@ -1,9 +1,10 @@
 import React from "react";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import images from "../../images";
 import FoodCardListItem from "../../components/FoodCardListItem";
 import FoodCardList from "../../components/FoodCardList";
 import { Animated } from "react-animated-css";
-import { connect } from "react-redux";
 import { setPizzaToppings } from "../../actions";
 
 class ChoosePizzaToppingsPage extends React.Component {
@@ -33,6 +34,12 @@ class ChoosePizzaToppingsPage extends React.Component {
             height: "100vh",
           }}
         >
+          <Link to="/choose-pizza-crust">
+            <i
+              class="left chevron icon"
+              style={{ marginRight: "30px", color: "green" }}
+            ></i>
+          </Link>
           <FoodCardList>
             <div style={{ minWidth: "193.21px" }}>
               <FoodCardListItem
