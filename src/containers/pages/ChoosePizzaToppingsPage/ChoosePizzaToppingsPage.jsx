@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import images from "../../images";
-import FoodCardListItem from "../../components/FoodCardListItem";
-import FoodCardList from "../../components/FoodCardList";
+import images from "../../../images";
+import FoodCardListItem from "../../../components/FoodCardListItem";
+import FoodCardList from "../../../components/FoodCardList";
 import { Animated } from "react-animated-css";
-import { setPizzaToppings } from "../../actions";
+import { setPizzaToppings } from "../../../actions";
 
 class ChoosePizzaToppingsPage extends React.Component {
   render() {

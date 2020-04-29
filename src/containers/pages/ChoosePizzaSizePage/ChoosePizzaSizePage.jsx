@@ -1,9 +1,9 @@
 import React from "react";
-import PresentationFoodCardList from "../../components/PresentationFoodCardList";
-import PresentationFoodCard from "../../components/PresentationFoordCard";
+import PresentationFoodCardList from "../../../components/PresentationFoodCardList";
+import PresentationFoodCard from "../../../components/PresentationFoordCard";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { setPizzaSize } from "../../actions/";
+import { setPizzaSize } from "../../../actions";
 import { Animated } from "react-animated-css";
 
 class ChoosePizzaSizePage extends React.Component {
@@ -52,6 +52,7 @@ class ChoosePizzaSizePage extends React.Component {
               image="https://res.cloudinary.com/fbfdsouza/image/upload/c_scale,h_70,w_70/v1588062925/pizzaorder/pizzabox_ihlwjp.png"
               name="Big"
               price={""}
+              onClick={() => setPizzaSize("big")}
             />
           </PresentationFoodCardList>
           <div>

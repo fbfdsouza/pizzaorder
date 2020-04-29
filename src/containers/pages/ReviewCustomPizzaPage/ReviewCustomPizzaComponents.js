@@ -1,6 +1,6 @@
 import React from "react";
 
-const Receipt = ({ size, crust, toppings }) => {
+export const Receipt = ({ size, crust, toppings }) => {
   const renderToppings = (toppings) => {
     const filteredToppings = chosenToppings(toppings);
 
@@ -56,5 +56,3 @@ const Receipt = ({ size, crust, toppings }) => {
     </div>
   );
 };
-
-export default Receipt;

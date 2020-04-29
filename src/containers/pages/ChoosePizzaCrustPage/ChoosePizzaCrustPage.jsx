@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
 import { connect } from "react-redux";
-import PresentationFoodCardList from "../../components/PresentationFoodCardList";
-import PresentationFoodCard from "../../components/PresentationFoordCard";
+import PresentationFoodCardList from "../../../components/PresentationFoodCardList";
+import PresentationFoodCard from "../../../components/PresentationFoordCard";
 import { Link } from "react-router-dom";
 import { Animated } from "react-animated-css";
-import { setPizzaCrust } from "../../actions";
+import { setPizzaCrust } from "../../../actions";
 
 class ChoosePizzaCrustPage extends React.Component {
   render() {

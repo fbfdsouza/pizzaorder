@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import PresentationFoodCardList from "../../components/PresentationFoodCardList";
-import Receipt from "../../components/Receipt";
+import PresentationFoodCardList from "../../../components/PresentationFoodCardList";
+import { Receipt } from "./ReviewCustomPizzaComponents";
 import { Link } from "react-router-dom";
 import { Animated } from "react-animated-css";
 
