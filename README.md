@@ -4,7 +4,7 @@ This is a simple project that uses React and Redux to mock what would be a simpl
 
 ## Get it up and running
 
-### With Node and NPM Installed (Execute this process to the api and client project) .
+### With Node and NPM Installed
 
 1 - Install the dependencies
 
