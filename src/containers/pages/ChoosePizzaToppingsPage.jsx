@@ -116,6 +116,12 @@ class ChoosePizzaToppingsPage extends React.Component {
               />
             </div>
           </FoodCardList>
+          <Link to="/pizza-receipt">
+            <i
+              class="right chevron icon"
+              style={{ marginLeft: "30px", color: "green" }}
+            ></i>
+          </Link>
         </div>
       </div>
     );
