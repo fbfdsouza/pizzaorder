@@ -5,10 +5,13 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { setPizzaSize } from "../../../actions";
 import { Animated } from "react-animated-css";
+import { useTranslation } from 'react-i18next';
 
-class ChoosePizzaSizePage extends React.Component {
-  render() {
-    const { setPizzaSize } = this.props;
+
+const ChoosePizzaSizePage = (props) => {
+    const { t } = useTranslation();
+    const { setPizzaSize, match: {params:{lang}}  } = props;
+
     return (
       <div>
         <div
@@ -22,7 +25,7 @@ class ChoosePizzaSizePage extends React.Component {
           }}
         >
           <Animated animationIn="pulse" animationOut="fadeOut" isVisible={true}>
-            <h2>Choose your pizza size</h2>
+            <h2>{t('pizza.size.title')}</h2>
           </Animated>
         </div>
         <div
@@ -56,9 +59,9 @@ class ChoosePizzaSizePage extends React.Component {
             />
           </PresentationFoodCardList>
           <div>
-            <Link to="/choose-pizza-crust">
+            <Link to={`${lang}/choose-pizza-crust`}>
               <i
-                class="right chevron icon"
+                className="right chevron icon"
                 style={{ marginRight: "30px", color: "green" }}
               ></i>
             </Link>
@@ -66,7 +69,7 @@ class ChoosePizzaSizePage extends React.Component {
         </div>
       </div>
     );
-  }
+  
 }
 
 const mapStateToProps = (state) => {
@@ -74,3 +77,4 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, { setPizzaSize })(ChoosePizzaSizePage);
+

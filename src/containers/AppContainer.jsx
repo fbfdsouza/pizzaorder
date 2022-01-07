@@ -12,20 +12,20 @@ class App extends Component {
       <Fragment>
         <Router history={getHistory()}>
           <Switch>
-            <Route exact path="/" component={ChoosePizzaSizePage} />
+            <Route exact path="/:lang" component={ChoosePizzaSizePage} />
             <Route
               exact
-              path="/choose-pizza-crust"
+              path="/:lang/choose-pizza-crust"
               component={ChoosePizzaCrustPage}
             />
             <Route
               exact
-              path="/choose-pizza-toppings"
+              path="/:lang/choose-pizza-toppings"
               component={ChoosePizzaToppingsPage}
             />
             <Route
               exact
-              path="/pizza-receipt"
+              path="/:lang/pizza-receipt"
               component={ReviewCustomPizzaPage}
             />
           </Switch>

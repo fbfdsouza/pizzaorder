@@ -4,48 +4,48 @@ import PresentationFoodCardList from "../../../components/PresentationFoodCardLi
 import { Receipt } from "./ReviewCustomPizzaComponents";
 import { Link } from "react-router-dom";
 import { Animated } from "react-animated-css";
+import { useTranslation } from "react-i18next";
 
-class ChoosePizzaCrustPage extends React.Component {
-  render() {
-    const { size, crust, toppings } = this.props;
-    return (
-      <div>
-        <div
-          style={{
-            position: "absolute",
-            display: "flex",
-            justifyContent: "center",
-            width: "100%",
-            height: "109px",
-            alignItems: "center",
-          }}
-        >
-          <Animated animationIn="pulse" animationOut="fadeOut" isVisible={true}>
-            <h2>Receipt</h2>
-          </Animated>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "100vh",
-          }}
-        >
-          <Link to="/choose-pizza-toppings">
-            <i
-              className="left chevron icon"
-              style={{ marginRight: "30px", color: "green" }}
-            ></i>
-          </Link>
-          <PresentationFoodCardList>
-            <Receipt size={size} crust={crust} toppings={toppings} />
-          </PresentationFoodCardList>
-        </div>
+const ChoosePizzaCrustPage = (props) => {
+  const { t } = useTranslation();
+  const { size, crust, toppings } = props;
+  return (
+    <div>
+      <div
+        style={{
+          position: "absolute",
+          display: "flex",
+          justifyContent: "center",
+          width: "100%",
+          height: "109px",
+          alignItems: "center",
+        }}
+      >
+        <Animated animationIn="pulse" animationOut="fadeOut" isVisible={true}>
+          <h2>{t('pizza.receipt.title')}</h2>
+        </Animated>
       </div>
-    );
-  }
-}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+        }}
+      >
+        <Link to="/choose-pizza-toppings">
+          <i
+            className="left chevron icon"
+            style={{ marginRight: "30px", color: "green" }}
+          ></i>
+        </Link>
+        <PresentationFoodCardList>
+          <Receipt size={size} crust={crust} toppings={toppings} />
+        </PresentationFoodCardList>
+      </div>
+    </div>
+  );
+};
 
 const mapStateToProps = (state) => {
   return {
