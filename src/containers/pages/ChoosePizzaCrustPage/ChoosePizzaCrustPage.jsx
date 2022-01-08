@@ -9,8 +9,13 @@ import { setPizzaCrust } from "../../../actions";
 
 const ChoosePizzaCrustPage = (props) => {
   const { t } = useTranslation();
-  const { setPizzaCrust, match: {params:{lang}}  } = props;
-  debugger
+  const {
+    setPizzaCrust,
+    match: {
+      params: { lang },
+    },
+  } = props;
+
   return (
     <div>
       <div
@@ -24,7 +29,7 @@ const ChoosePizzaCrustPage = (props) => {
         }}
       >
         <Animated animationIn="pulse" animationOut="fadeOut" isVisible={true}>
-          <h2>{t('pizza.crust.title')}</h2>
+          <h2>{t("pizza.crust.title")}</h2>
         </Animated>
       </div>
       <div
@@ -37,7 +42,7 @@ const ChoosePizzaCrustPage = (props) => {
       >
         <Link to={`/${lang}`}>
           <i
-            class="left chevron icon"
+            className="left chevron icon"
             style={{ marginRight: "30px", color: "green" }}
           ></i>
         </Link>
@@ -58,9 +63,9 @@ const ChoosePizzaCrustPage = (props) => {
             />
           </Fragment>
         </PresentationFoodCardList>
-        <Link to={`${lang}/choose-pizza-toppings`}>
+        <Link to={`/${lang}/choose-pizza-toppings`}>
           <i
-            class="right chevron icon"
+            className="right chevron icon"
             style={{ marginLeft: "30px", color: "green" }}
           ></i>
         </Link>

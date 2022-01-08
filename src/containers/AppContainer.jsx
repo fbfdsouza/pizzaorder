@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Router, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch, Redirect } from "react-router-dom";
 import { getHistory } from "../utils";
 import ChoosePizzaSizePage from "./pages/ChoosePizzaSizePage";
 import ChoosePizzaCrustPage from "./pages/ChoosePizzaCrustPage";
@@ -28,6 +28,9 @@ class App extends Component {
               path="/:lang/pizza-receipt"
               component={ReviewCustomPizzaPage}
             />
+            <Route exact path="/" component={ChoosePizzaSizePage}>
+              <Redirect to="/en" component={ChoosePizzaSizePage}/>
+            </Route>
           </Switch>
         </Router>
       </Fragment>

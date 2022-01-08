@@ -8,7 +8,15 @@ import { useTranslation } from "react-i18next";
 
 const ChoosePizzaCrustPage = (props) => {
   const { t } = useTranslation();
-  const { size, crust, toppings } = props;
+  const {
+    size,
+    crust,
+    toppings,
+    match: {
+      params: { lang },
+    },
+  } = props;
+
   return (
     <div>
       <div
@@ -22,7 +30,7 @@ const ChoosePizzaCrustPage = (props) => {
         }}
       >
         <Animated animationIn="pulse" animationOut="fadeOut" isVisible={true}>
-          <h2>{t('pizza.receipt.title')}</h2>
+          <h2>{t("pizza.receipt.title")}</h2>
         </Animated>
       </div>
       <div
@@ -33,7 +41,7 @@ const ChoosePizzaCrustPage = (props) => {
           height: "100vh",
         }}
       >
-        <Link to="/choose-pizza-toppings">
+        <Link to={`/${lang}/choose-pizza-toppings`}>
           <i
             className="left chevron icon"
             style={{ marginRight: "30px", color: "green" }}
