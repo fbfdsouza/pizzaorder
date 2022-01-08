@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import reducers from "./reducers";
 import "./styles/styles.css";
+import './translations/i18n';
 
 import AppContainer from "./containers/AppContainer";
 

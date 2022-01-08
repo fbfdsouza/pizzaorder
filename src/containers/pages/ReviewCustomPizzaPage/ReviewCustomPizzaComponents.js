@@ -1,6 +1,8 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export const Receipt = ({ size, crust, toppings }) => {
+  const { t } = useTranslation();
   const renderToppings = (toppings) => {
     const filteredToppings = chosenToppings(toppings);
 
@@ -43,16 +45,16 @@ export const Receipt = ({ size, crust, toppings }) => {
   return (
     <div className="ui celled ordered list">
       <div className="item" key="size">
-        {`Size: ${size.pizzaSize} ${pizzaSizePrice(size)} $`}
+        {`${t("pizza.size.text")}: ${size.pizzaSize} ${pizzaSizePrice(size)} $`}
       </div>
-      <div className="item" key="crust">{`Crust: ${
+      <div className="item" key="crust">{`${t("pizza.crust.text")}: ${
         crust.thickness
       } ${pizzaCrustPrice(crust)} $`}</div>
       <div className="item" key="toppings">
-        Toppings
+        ${t("pizza.toppings.text")}
         <div className="list">{renderToppings(toppings)}</div>
       </div>
-      Total: {totalPrice(size, crust, toppings)} $
+      {t("pizza.receipt.total")}: {totalPrice(size, crust, toppings)} $
     </div>
   );
 };
